@@ -6,6 +6,21 @@ function setPuzzlePieces(){
     for (var i = 0; i < puzzlePiece.length - 1; i++){
         puzzlePiece[i].addClassName("puzzlepiece");
         puzzlePiece[i].style.backgroundImage = "url('background.jpg')";
+		puzzlePiece[i].style.backgroundSize = "400px 400px";
         puzzlePiece[i].style.backgroundPosition = "-304px 0px";
     }
+}
+
+
+// determines whether a given square can move or not
+function isMovable(){
+	var tiles = document.getElementById("puzzlearea");
+    var puzzlePiece = tiles.getElementsByTagName("div");
+    for (var i = 0; i < puzzlePiece.length - 1; i++){
+		if (puzzlePiece[i].innerHTML != " "){
+			puzzlePiece[i].addEventListener("onmouseover", function() {
+                puzzlePiece[i].addClassName("movablepiece");
+		    }
+		}
+	}
 }
