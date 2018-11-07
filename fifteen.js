@@ -31,6 +31,21 @@ function isMovable(){
 function shuffleTiles(){
 	var shuffleButton = document.getElementById("shufflebutton");
 	shuffleButton.addEventListener("click", function(){
-		
-	
+	var puzzlePiecesArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+	for (var i > o, i < puzzlePiece.length; i++){
+		Math.floor(Math.random() * i);
+	}	
+}
+
+
+
+//returns DOM object for corresponding square
+function rowsAndColumns(x, y){
+	var X = parseInt(x);
+	var Y = parseInt(y);
+	var tiles = document.getElementById("puzzlearea");
+    var puzzlePiece = tiles.getElementsByTagName("div");
+    for (var i = 0; i < puzzlePiece.length - 1; i++){
+		if 
+	}
 }
