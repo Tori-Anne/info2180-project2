@@ -4,7 +4,7 @@ function setPuzzlePieces(){
     var tiles = document.getElementById("puzzlearea");
     var puzzlePiece = tiles.getElementsByTagName("div");
     for (var i = 0; i < puzzlePiece.length - 1; i++){
-        puzzlePiece[i].addClassName("puzzlepiece");
+        puzzlePiece[i].classlist.add("puzzlepiece");
         puzzlePiece[i].style.backgroundImage = "url('background.jpg')";
 		puzzlePiece[i].style.backgroundSize = "400px 400px";
         puzzlePiece[i].style.backgroundPosition = "-304px 0px";
@@ -19,7 +19,7 @@ function isMovable(){
     for (var i = 0; i < puzzlePiece.length - 1; i++){
 		if (puzzlePiece[i].innerHTML != ""){
 			puzzlePiece[i].addEventListener("mouseover", function(){
-                puzzlePiece[i].addClassName("movablepiece");
+                puzzlePiece[i].classlist.add("movablepiece");
 		    }
 		}
 	}
@@ -46,6 +46,7 @@ function rowsAndColumns(x, y){
 	var tiles = document.getElementById("puzzlearea");
     var puzzlePiece = tiles.getElementsByTagName("div");
     for (var i = 0; i < puzzlePiece.length - 1; i++){
-		if 
+		puzzlePiece[i].style.left = X + "px";
+		puzzlePiece[i].style.top = Y + "px";
 	}
 }
